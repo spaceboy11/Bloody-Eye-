@@ -626,6 +626,7 @@ exit();""")
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
       print("uhahahahahahahahahahahahahhahahaahah")
+      time.sleep(5)
       os.system("clear")
       sys.exit()
 
