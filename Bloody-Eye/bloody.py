@@ -29,10 +29,10 @@ try:
             localhost.spotify()
         e()
     elif a == "05":
-        os.system("cls")
+        os.system("clear")
         os.system("exit")
 except:
-    os.system("cls")
+    os.system("clear")
     sys.exit()
 
 
