@@ -9,9 +9,10 @@ from pyngrok import ngrok
 import json
 from modules import bannner
 import time
-with open("config.json", "r") as read_file:
-    data = json.load(read_file)
-    token = data["ngrok11"]
+with open("config.json","r") as read_file:
+   data = json.load(read_file)
+   token = data["ngrok11"]
+
 
 stat_file = 0
 # instagram temp
