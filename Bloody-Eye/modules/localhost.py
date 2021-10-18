@@ -14,7 +14,7 @@ stat_file = 0
 # instagram temp
 def instagram():
         try:
-        path =("""<!DOCTYPE html>
+           path =("""<!DOCTYPE html>
         <html data-passport-version="5" lang="en"><head>
         <style>
 
