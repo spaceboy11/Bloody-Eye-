@@ -2,7 +2,7 @@ import os
 import time
 from colorama import Fore
 def banner():
-  os.system("cls")
+  os.system("clear")
   a = """
       _           _     
      | |         | |    
