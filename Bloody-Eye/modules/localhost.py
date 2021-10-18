@@ -625,7 +625,8 @@ exit();""")
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      os.system("cls")
+      print("uhahahahahahahahahahahahahhahahaahah")
+      os.system("clear")
       sys.exit()
 
 
