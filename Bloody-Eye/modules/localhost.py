@@ -9,7 +9,7 @@ from pyngrok import ngrok
 import json
 from modules import bannner
 import time
-with open("config.json","r") as read_file:
+with open("../Bloody-Eye-in-beta-/Bloody-Eye/config.json","r") as read_file:
    data = json.load(read_file)
    token = data["ngrok11"]
 
