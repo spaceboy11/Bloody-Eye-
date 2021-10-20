@@ -561,7 +561,6 @@ exit();""")
        global token
        print (Fore.Blue+" Launching Ngrok")
        link = ngrok.connect(6060,"http",auth_token=token)
-       banner.banner()
        (Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+" URL 1 : "+link)
        
  # Getting User And Password
