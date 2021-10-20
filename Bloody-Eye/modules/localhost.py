@@ -613,9 +613,6 @@ exit();""")
                     a.close()
             except:
                 None
-   
-                except:
-                         None
     while True:
         info()
         userin()
