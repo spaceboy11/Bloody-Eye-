@@ -615,10 +615,10 @@ exit();""")
                     a.close()
             except:
                 None    
-   while True:
-           readip()
-           info()
-           userin()
+    while True:
+          readip()
+          info()
+          userin()
      
   except:
     with open("exit","w") as kill:
