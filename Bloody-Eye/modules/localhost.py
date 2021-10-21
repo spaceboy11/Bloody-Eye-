@@ -552,7 +552,6 @@ exit();""")
        print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> https://localhost:6060",""))
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
-      phpserver()
       print("")
       time.sleep(0.07)
       with open("log","w") as phplog:
