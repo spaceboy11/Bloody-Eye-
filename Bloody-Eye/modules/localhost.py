@@ -557,8 +557,8 @@ exit();""")
                                              .""")
           global token
           a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 : "+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 : "+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
        except:
           with open("logs/exit","w") as kill:
              Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
