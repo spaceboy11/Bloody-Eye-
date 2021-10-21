@@ -539,8 +539,8 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Choose a Service to Port Forwarding")
     print("")
     time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+" Localhost")
-    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" Ngorok.io")
+    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+Fore.YELLOW+" Localhost")
+    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
     print("")
     def ngrokserver():
        try:
