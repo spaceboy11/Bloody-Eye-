@@ -3,14 +3,6 @@ import time
 from colorama import Fore
 def banner():
   os.system("clear")
-  a = """
-      _           _     
-     | |         | |    
-  ___| | __ _ ___| |__  
- / __| |/ _` / __| '_ \ 
- \__ \ | (_| \__ \ | | |
- |___/_|\__,_|___/_| |_|
-                        """
   b = """        
         _     _     _               
        | |   (_)   | |              
@@ -21,13 +13,13 @@ def banner():
  | |                                
  |_|
  """
-  aa = (Fore.RED+a+b)
+  aa = (Fore.RED+b)
   print(aa)
  
 def list():
     print("")
     time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"01"+Fore.RED+"]"+" Instagram")
+    print(Fore.RED+" ["+Fore.WHITE+"01"+Fore.RED+"]"+Fore.YELLOW+" Instagram")
     time.sleep(0.07)
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+" GitHub")
     time.sleep(0.07)
