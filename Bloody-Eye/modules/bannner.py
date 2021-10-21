@@ -25,6 +25,6 @@ def list():
     time.sleep(0.07)
     print(Fore.RED+" ["+Fore.WHITE+"03"+Fore.RED+"]"+Fore.YELLOW+" Twitch")
     time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"04"+Fore.RED+"]"+Fore.YELLOW" Spotify")
+    print(Fore.RED+" ["+Fore.WHITE+"04"+Fore.RED+"]"+Fore.YELLOW+" Spotify")
     time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"05"+Fore.RED+"]"+Fore.YELLOW" Exit")
+    print(Fore.RED+" ["+Fore.WHITE+"05"+Fore.RED+"]"+Fore.YELLOW+" Exit")
