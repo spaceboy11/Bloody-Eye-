@@ -15,7 +15,29 @@ def banner():
  """
   aa = (Fore.RED+b)
   print(aa)
- 
+def banner2():
+   print(Fore.BLUE+"""
+..............                                 
+            ..,;:ccc,.                             
+          ......''';lxO.                  
+.....''''..........,:ld;                         
+           .';;;:::;,,.x,         
+      ..'''.            0Xxoc:,.  ...  
+  ....                ,ONkc;,;cokOdc',.   
+ .                   OMo           ':ddo.  
+                    dMc               :OO;     
+                    0M.                 .:o.   
+                    ;Wd
+                     ;XO,
+                       ,d0Odlc;,..
+                           ..',;:cdOOd::,.
+                                    .:d;.':;.
+                                       'd,  .'
+                                         ;l   ..
+                                          .o
+                                            c
+                                            .'
+                                             .
 def list():
     print("")
     time.sleep(0.07)
