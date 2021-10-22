@@ -37,7 +37,7 @@ def banner2():
                                           .o
                                             c
                                             .'
-                                             .
+                                             .""")
 def list():
     print("")
     time.sleep(0.07)
