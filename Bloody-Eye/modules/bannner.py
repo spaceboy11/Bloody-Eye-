@@ -16,6 +16,7 @@ def banner():
   aa = (Fore.RED+b)
   print(aa)
 def banner2():
+   os.system("clear")
    print(Fore.BLUE+"""
 ..............                                 
             ..,;:ccc,.                             
