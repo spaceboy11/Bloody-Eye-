@@ -1068,3 +1068,13 @@ exit();
         Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
         print(" ")
         sys.exit()
+def sound():
+    
+
+
+
+
+
+
+
+
